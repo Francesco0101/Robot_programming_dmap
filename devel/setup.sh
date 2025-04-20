@@ -1,0 +1,1 @@
+/home/lattinone/Desktop/Robot_programming_dmap/devel/.private/catkin_tools_prebuild/setup.sh

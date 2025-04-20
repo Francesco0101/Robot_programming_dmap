@@ -1,0 +1,8 @@
+prefix=/home/lattinone/Desktop/Robot_programming_dmap/install
+
+Name: dmap_listener
+Description: Description of dmap_listener
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
