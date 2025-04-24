@@ -8,7 +8,7 @@
 #include "draw_helpers.h"
 #include "dmap_localizer.h"
 
-#include <limits>  // Per std::isfinite
+#include <limits>  
 
 ros::Publisher pose_pub;
 
@@ -32,7 +32,7 @@ void mapCallback(const nav_msgs::OccupancyGrid::ConstPtr& msg)
     uint32_t width = msg->info.width;
     uint32_t height = msg->info.height;
 
-    obstacles.clear();  // Pulizia della lista per evitare duplicazioni
+    obstacles.clear();  
 
     for (uint32_t i = 0; i < height; ++i)
     {
@@ -40,8 +40,9 @@ void mapCallback(const nav_msgs::OccupancyGrid::ConstPtr& msg)
         {
             int index = i * width + j;
             int value = msg->data[index];
-            if (value >= 50)  // Soglia più flessibile
+            if (value >= 50) 
             {
+                ROS_INFO("Occupied cell at (%d, %d)", j, i);
                 Vector2f coord = grid_mapping.grid2world(Vector2f(j, i));
                 obstacles.push_back(coord);
             }
@@ -113,6 +114,8 @@ void scanCallback(const sensor_msgs::LaserScan& scan)
     odom.pose.pose.orientation.y = q.y();
     odom.pose.pose.orientation.z = q.z();
     odom.pose.pose.orientation.w = q.w();
+    std::cerr << "odom orient x: " << odom.pose.pose.orientation.x << std::endl;
+    std::cerr << "odom orient y: " << odom.pose.pose.orientation.y << std::endl;
 
     pose_pub.publish(odom);
 
@@ -122,8 +125,7 @@ void scanCallback(const sensor_msgs::LaserScan& scan)
 int main(int argc, char** argv)
 {
     ros::init(argc, argv, "dmap_localizer_node");
-    ros::NodeHandle nh("~");  // Handle privato per parametri
-
+    ros::NodeHandle nh("~");  
     nh.param("max_range", max_range, 10.0f);
     nh.param("expansion_range", expansion_range, 1.0f);
 
@@ -132,10 +134,8 @@ int main(int argc, char** argv)
     ros::Subscriber init_sub = nh.subscribe("/initialpose", 1, initCallback);
     ros::Subscriber scan_sub = nh.subscribe("/base_scan", 1, scanCallback);
     
-    ros::Rate rate(50);  // Ciclo a 50 Hz
     while (ros::ok()) {
         ros::spinOnce();
-        rate.sleep();
     }
 
     return 0;
