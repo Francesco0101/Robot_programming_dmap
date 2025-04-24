@@ -1,0 +1,81 @@
+[35m[1mScanning dependencies of target main_node[0m
+[ 16%] [32mBuilding CXX object CMakeFiles/main_node.dir/src/main_node.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/main_node.dir/src/dmap_localizer.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/main_node.dir/src/dmap.cpp.o[0m
+[01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap_localizer.cpp:[m[K In member function ‘[01m[Kbool DMapLocalizer::localize(const std::vector<Eigen::Matrix<float, 2, 1> >&, int)[m[K’:
+[01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap_localizer.cpp:126:31:[m[K [01;35m[Kwarning: [m[KISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
+  126 |       float e=distances(p_grid[01;35m[K)[m[K;
+      |                               [01;35m[K^[m[K
+In file included from [01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap.h:2[m[K,
+                 from [01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap_localizer.h:4[m[K,
+                 from [01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap_localizer.cpp:1[m[K:
+[01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/grid.h:69:25:[m[K [01;36m[Knote: [m[Kcandidate 1: ‘[01m[Kconst CellType Grid_<CellType_>::operator()(const Vector2f&) const [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2f = Eigen::Matrix<float, 2, 1>][m[K’
+   69 |   inline const CellType [01;36m[Koperator[m[K()(const Vector2f& coordinates) const {
+      |                         [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/grid.h:48:20:[m[K [01;36m[Knote: [m[Kcandidate 2: ‘[01m[KGrid_<CellType_>::CellType& Grid_<CellType_>::operator()(const Vector2i&) [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2i = Eigen::Matrix<int, 2, 1>][m[K’
+   48 |   inline CellType& [01;36m[Koperator[m[K()(const Vector2i& coordinates) {
+      |                    [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap_localizer.cpp:126:31:[m[K [01;35m[Kwarning: [m[KISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
+  126 |       float e=distances(p_grid[01;35m[K)[m[K;
+      |                               [01;35m[K^[m[K
+In file included from [01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap.h:2[m[K,
+                 from [01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap_localizer.h:4[m[K,
+                 from [01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap_localizer.cpp:1[m[K:
+[01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/grid.h:69:25:[m[K [01;36m[Knote: [m[Kcandidate 1: ‘[01m[Kconst CellType Grid_<CellType_>::operator()(const Vector2f&) const [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2f = Eigen::Matrix<float, 2, 1>][m[K’
+   69 |   inline const CellType [01;36m[Koperator[m[K()(const Vector2f& coordinates) const {
+      |                         [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/grid.h:48:20:[m[K [01;36m[Knote: [m[Kcandidate 2: ‘[01m[KGrid_<CellType_>::CellType& Grid_<CellType_>::operator()(const Vector2i&) [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2i = Eigen::Matrix<int, 2, 1>][m[K’
+   48 |   inline CellType& [01;36m[Koperator[m[K()(const Vector2i& coordinates) {
+      |                    [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap_localizer.cpp:134:37:[m[K [01;35m[Kwarning: [m[KISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
+  134 |       J_dmap.x()=distances_dc(p_grid[01;35m[K)[m[K;
+      |                                     [01;35m[K^[m[K
+In file included from [01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap.h:2[m[K,
+                 from [01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap_localizer.h:4[m[K,
+                 from [01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap_localizer.cpp:1[m[K:
+[01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/grid.h:69:25:[m[K [01;36m[Knote: [m[Kcandidate 1: ‘[01m[Kconst CellType Grid_<CellType_>::operator()(const Vector2f&) const [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2f = Eigen::Matrix<float, 2, 1>][m[K’
+   69 |   inline const CellType [01;36m[Koperator[m[K()(const Vector2f& coordinates) const {
+      |                         [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/grid.h:48:20:[m[K [01;36m[Knote: [m[Kcandidate 2: ‘[01m[KGrid_<CellType_>::CellType& Grid_<CellType_>::operator()(const Vector2i&) [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2i = Eigen::Matrix<int, 2, 1>][m[K’
+   48 |   inline CellType& [01;36m[Koperator[m[K()(const Vector2i& coordinates) {
+      |                    [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap_localizer.cpp:134:37:[m[K [01;35m[Kwarning: [m[KISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
+  134 |       J_dmap.x()=distances_dc(p_grid[01;35m[K)[m[K;
+      |                                     [01;35m[K^[m[K
+In file included from [01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap.h:2[m[K,
+                 from [01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap_localizer.h:4[m[K,
+                 from [01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap_localizer.cpp:1[m[K:
+[01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/grid.h:69:25:[m[K [01;36m[Knote: [m[Kcandidate 1: ‘[01m[Kconst CellType Grid_<CellType_>::operator()(const Vector2f&) const [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2f = Eigen::Matrix<float, 2, 1>][m[K’
+   69 |   inline const CellType [01;36m[Koperator[m[K()(const Vector2f& coordinates) const {
+      |                         [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/grid.h:48:20:[m[K [01;36m[Knote: [m[Kcandidate 2: ‘[01m[KGrid_<CellType_>::CellType& Grid_<CellType_>::operator()(const Vector2i&) [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2i = Eigen::Matrix<int, 2, 1>][m[K’
+   48 |   inline CellType& [01;36m[Koperator[m[K()(const Vector2i& coordinates) {
+      |                    [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap_localizer.cpp:135:37:[m[K [01;35m[Kwarning: [m[KISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
+  135 |       J_dmap.y()=distances_dr(p_grid[01;35m[K)[m[K;
+      |                                     [01;35m[K^[m[K
+In file included from [01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap.h:2[m[K,
+                 from [01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap_localizer.h:4[m[K,
+                 from [01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap_localizer.cpp:1[m[K:
+[01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/grid.h:69:25:[m[K [01;36m[Knote: [m[Kcandidate 1: ‘[01m[Kconst CellType Grid_<CellType_>::operator()(const Vector2f&) const [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2f = Eigen::Matrix<float, 2, 1>][m[K’
+   69 |   inline const CellType [01;36m[Koperator[m[K()(const Vector2f& coordinates) const {
+      |                         [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/grid.h:48:20:[m[K [01;36m[Knote: [m[Kcandidate 2: ‘[01m[KGrid_<CellType_>::CellType& Grid_<CellType_>::operator()(const Vector2i&) [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2i = Eigen::Matrix<int, 2, 1>][m[K’
+   48 |   inline CellType& [01;36m[Koperator[m[K()(const Vector2i& coordinates) {
+      |                    [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap_localizer.cpp:135:37:[m[K [01;35m[Kwarning: [m[KISO C++ says that these are ambiguous, even though the worst conversion for the first is better than the worst conversion for the second:
+  135 |       J_dmap.y()=distances_dr(p_grid[01;35m[K)[m[K;
+      |                                     [01;35m[K^[m[K
+In file included from [01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap.h:2[m[K,
+                 from [01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap_localizer.h:4[m[K,
+                 from [01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/dmap_localizer.cpp:1[m[K:
+[01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/grid.h:69:25:[m[K [01;36m[Knote: [m[Kcandidate 1: ‘[01m[Kconst CellType Grid_<CellType_>::operator()(const Vector2f&) const [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2f = Eigen::Matrix<float, 2, 1>][m[K’
+   69 |   inline const CellType [01;36m[Koperator[m[K()(const Vector2f& coordinates) const {
+      |                         [01;36m[K^~~~~~~~[m[K
+[01m[K/home/lattinone/Desktop/Robot_programming_dmap/src/dmap_listener/src/grid.h:48:20:[m[K [01;36m[Knote: [m[Kcandidate 2: ‘[01m[KGrid_<CellType_>::CellType& Grid_<CellType_>::operator()(const Vector2i&) [with CellType_ = float; Grid_<CellType_>::CellType = float; Vector2i = Eigen::Matrix<int, 2, 1>][m[K’
+   48 |   inline CellType& [01;36m[Koperator[m[K()(const Vector2i& coordinates) {
+      |                    [01;36m[K^~~~~~~~[m[K
+[ 66%] [32mBuilding CXX object CMakeFiles/main_node.dir/src/draw_helpers.cpp.o[0m
+[ 83%] [32mBuilding CXX object CMakeFiles/main_node.dir/src/grid_map.cpp.o[0m
+[100%] [32m[1mLinking CXX executable /home/lattinone/Desktop/Robot_programming_dmap/devel/.private/dmap_listener/lib/dmap_listener/main_node[0m
+[100%] Built target main_node
