@@ -1,25 +1,27 @@
 # Robot_programming_dmap
 
-Questo progetto implementa un nodo ROS che:
-- Riceve una mappa come una **Occupancy Grid** (`/map`)
-- Riceve una **posa iniziale** (`/initialpose`)
-- Riceve misure da un **laser scanner** (`/base_scan`)
-- Usa un **Distance Map (DMap)** per **calcolare la posa del robot** e pubblicare una stima dell'**odometria corretta** su `/odom`.
+This project implements a 2D localization system using ROS and a Distance Map. The robot receives an  occupancy map, an initial pose, and live laser scans. It estimates and continuously updates its corrected pose thanks to a laser scanner.
 
+## Features
 
-## Installazione
+- Receives a map as an Occupancy Grid (`/map`)
+- Receives an initial pose (`/initialpose`)
+- Receives laser measurements (`/base_scan`)
+- Uses a Distance Map to register laser scan endpoints and estimate the most likely current robot pose, then publishes the corrected odometry on `/localization/odom`
 
-### 1. Requisiti
-- ROS1 con **Noetic** su Ubuntu 20.04 
+## Installation
 
-### 2. Clonare la repository
+### 1. Requirements
+- ROS1 with Noetic on Ubuntu 20.04
+
+### 2. Clone the repository
 
 ```bash
-git clone https://github.com/tuo-username/dmap_localization.git
+git clone https://github.com/Francesco0101/Robot_programming_dmap
 
 ```
 
-### 3. Buildare il progetto 
+### 3. Build the project
 
 ```bash
 
@@ -29,47 +31,41 @@ catkin build
 
 source devel/setup.bash
 ```
-## Ognuno dei punti successivi deve essere fatto su un terminale separato e usando i comandi
+## Running the Node 
+###   Each step should be run in a separate terminal in which you must run the commands:
 ``` bash
 source opt/ros/noetic/setup.bash
 source devel/setup.bash
 ```
-### 1. lancia il server centrale di ROS 
+### 1. Start ROS Core
 
 ```bash
 roscore
 ```
 
-### 2. lancia il nodo 
+### 2. Launch the node
 
 ```bash
 rosrun dmap_localizer main_node
 
 ```
 
-### 3. lancia il nodo per la localizzazione  
-
-```bash
-rosrun dmap_localizer main_node
-
-```
-
-### 4. pubblica la mappa  
+### 3. Publish the map
 
 ```bash
 rosrun map_server map_server <path/to/map.yaml>
 
 ```
 
-### 5. lancia il visualizzatore 
+### 4. Start RViz for visualization
 ```bash
 rviz
 
 ```
 
-### 6. lancia la simulazione dove è possibile muovere il robot
+### 6. Start the similuation in which you can see the real position of the robot and move it around
 
 ```bash
-rosrun map_server map_server <path/to/map.yaml>
+rosrun stage_ros stageros <path/to/map.world>
 
 ```
